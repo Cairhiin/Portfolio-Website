@@ -1,44 +1,12 @@
+import Hero from "./components/Hero";
+import Nav from "./components/nav";
+
 function App() {
   return (
     <>
       <header>
-        <nav className="nav">
-          <h1>
-            <span>{"<h1>"}</span>Frank van de Voorde<span>{"</h1>"}</span>
-          </h1>
-          <ul>
-            <li>About</li>
-            <li>Skills</li>
-            <li>Projects</li>
-            <li>Contact</li>
-          </ul>
-        </nav>
-        <section id="about" className="hero">
-          <div>I am Frank van de Voorde, a Web Developer.</div>
-          <div>
-            <p>
-              A self taught web developer and programmer with a bachelor in
-              Business Administration, exploring both frontend and full-stack
-              development.
-            </p>
-
-            <p>
-              Coding is my passion and I aim to learn new things on a daily
-              basis.
-            </p>
-            <div>
-              <p>
-                Years of experience designing, developing and updating a
-                Wordpress site for a local newspaper.
-              </p>
-
-              <p>
-                Check out my projects, skills, GitHub, GitLab, or drop me a
-                line. I am available for freelance opportunities.
-              </p>
-            </div>
-          </div>
-        </section>
+        <Nav />
+        <Hero />
       </header>
       <main>
         <section id="skills">

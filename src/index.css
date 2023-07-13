@@ -18,25 +18,31 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
+
 ol, ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -58,7 +64,15 @@ table {
   --color-600: hsl(213 14% 12% / 1);
   --color-highlight-400: hsl(210 96% 48% / 1);
 
-  --padding-400: clamp(1.00rem, calc(0.98rem + 0.12vw), 1.13rem);
+  --line-height-400: 1.4;
+  --spacing-200: clamp(0.69rem, calc(0.69rem + 0.02vw), 0.72rem);
+  --spacing-300: clamp(0.83rem, calc(0.82rem + 0.06vw), 0.90rem);
+  --spacing-400: clamp(1.00rem, calc(0.98rem + 0.12vw), 1.13rem);
+  --spacing-500: clamp(1.20rem, calc(1.16rem + 0.20vw), 1.41rem);
+  --spacing-600: clamp(1.44rem, calc(1.38rem + 0.31vw), 1.76rem);
+  --spacing-700: clamp(1.73rem, calc(1.64rem + 0.45vw), 2.20rem);
+  --spacing-800: clamp(2.07rem, calc(1.94rem + 0.65vw), 2.75rem);
+  --spacing-900: clamp(2.49rem, calc(2.31rem + 0.91vw), 3.43rem);
 }
 
 body {
@@ -66,11 +80,21 @@ body {
   color: var(--color-100);
   font-size: var(--fs-400);
   font-family: 'Roboto Condensed', sans-serif;
+  line-height: var(--line-height-400);
 }
 
-h1 {
+h1, h2, h3 {
   font-size: var(--fs-600);
   font-weight: 700;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: var(--fs-500);
+}
+
+h3 {
+  font-size: var(--fs-400);
 }
 
 header {
@@ -91,20 +115,6 @@ header::before {
   background-repeat: no-repeat;
 } 
 
-.nav {
-  position: sticky;
-  top: 0;
-  padding: var(--padding-400);
-  display: flex;
-  justify-content: space-between;
-  text-transform: uppercase;
-}
-
-.nav > h1 > span {
-  color: var(--color-highlight-400);
-}
-
-.nav > ul {
-  display: flex;
-  gap: 2rem;
+section, p {
+  margin-bottom: 1em;
 }

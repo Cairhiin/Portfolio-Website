@@ -1,0 +1,44 @@
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding-block: var(--spacing-900);
+  padding-inline: var(--spacing-800);
+}
+
+.hero > * {
+    flex: 1;
+}
+
+.hero-title  {
+    font-size: var(--fs-800);
+    text-transform: none;
+    text-wrap: balance;
+}
+
+.hero-title-highlight {
+    display: inline-block;
+    color: var(--color-200);
+    text-transform: uppercase;
+}
+
+.hero-title-highlight > span {
+    color: var(--color-highlight-400);
+    text-transform: lowercase;
+}
+
+.hero-content > div {
+    display: flex;
+    gap: 4rem;
+}
+
+.hero-content-column {
+    flex: 1;
+}
+
+.hero-content > h3 {
+    color: var(--color-200);
+    border-left: 4px solid var(--color-200);
+    margin-bottom: 1em;
+    padding-inline: var(--spacing-200)
+}
