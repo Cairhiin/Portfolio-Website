@@ -1,19 +1,41 @@
+.backdrop {
+  backdrop-filter: blur(10px);
+}
+
 .nav {
-    position: sticky;
-    top: 0;
-    padding-block: var(--spacing-400);
-    padding-inline: var(--spacing-800);
-    display: flex;
-    justify-content: space-between;
-    text-transform: uppercase;
-  }
-  
-  .nav > h1 > span {
-    color: var(--color-highlight-400);
-    text-transform: lowercase;
-  }
-  
-  .nav > ul {
-    display: flex;
-    gap: 2rem;
-  }
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  padding-inline: var(--spacing-800);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+  height: 60px;
+  line-height: 60px;
+}
+
+.nav > h1 > span {
+  color: var(--color-highlight-400);
+  text-transform: lowercase;
+}
+
+.nav > ul {
+  display: flex;
+  gap: var(--fs-400);
+}
+
+.nav li {
+  font-size: var(--fs-400);
+  padding-inline: var(--spacing-300);
+  text-align: center;
+  cursor: pointer;
+}
+
+.nav li:last-child {
+  padding-right: 0;
+}
+
+.nav li:hover {
+  background-color: var(--color-400);
+}
