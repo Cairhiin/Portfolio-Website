@@ -62,6 +62,7 @@ table {
   --color-200: hsl(213 20% 65% / 1);
   --color-400: hsl(213 20% 17% / 1);
   --color-600: hsl(213 14% 12% / 1);
+  --color-700: hsl(213 5% 5% / 1);
   --color-highlight-400: hsl(210 96% 48% / 1);
 
   --line-height-400: 1.4;
