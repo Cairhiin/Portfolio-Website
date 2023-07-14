@@ -33,11 +33,13 @@
 
 .hero-title-highlight {
   display: inline-block;
+  font-weight: 700;
   color: var(--color-200);
   text-transform: uppercase;
 }
 
 .hero-title-highlight > span {
+  font-weight: 400;
   color: var(--color-highlight-400);
   text-transform: lowercase;
 }

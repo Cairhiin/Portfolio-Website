@@ -1,3 +1,6 @@
+import { faCss3, faDev } from "@fortawesome/free-brands-svg-icons";
+import { faDatabase } from "@fortawesome/free-solid-svg-icons";
+import Card from "./components/Card";
 import Hero from "./components/Hero";
 import Nav from "./components/nav";
 
@@ -8,16 +11,34 @@ function App() {
       <Hero />
       <main>
         <section id="skills">
-          Aspernatur ad maxime placeat porro ipsam beatae. Provident
-          voluptatibus veniam ad, dignissimos alias fuga ducimus tenetur illum
-          hic sequi doloremque sint eius esse reiciendis ullam? Amet accusamus
-          illo sequi totam molestiae debitis facere aliquid excepturi odit
-          dicta! Voluptatem voluptates quos, non voluptatibus tenetur animi unde
-          vero maiores nam consectetur numquam dolorem, repellat, debitis culpa
-          optio. Alias dignissimos quaerat architecto aliquam amet deserunt
-          suscipit. Voluptatem dicta voluptatum quas ea at voluptate,
-          voluptatibus provident vero ipsa saepe! Quas beatae placeat nobis ab
-          iste similique inventore impedit dicta.
+          <Card title="Backend" icon={faDatabase}>
+            <ul>
+              <li>NodeJS</li>
+              <li>ExpressJS</li>
+              <li>Mongoose</li>
+              <li>PHP</li>
+              <li>Laravel</li>
+              <li>MySQL</li>
+            </ul>
+          </Card>
+          <Card title="Frontend" icon={faCss3}>
+            <ul>
+              <li>React</li>
+              <li>Angular</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Sass</li>
+              <li>TypeScript</li>
+              <li>NextJS</li>
+            </ul>
+          </Card>
+          <Card title="Other" icon={faDev}>
+            <ul>
+              <li>C++</li>
+              <li>Figma</li>
+              <li>WordPress</li>
+            </ul>
+          </Card>
         </section>
         <section id="projects">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt,

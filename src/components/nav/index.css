@@ -18,7 +18,12 @@
   line-height: 60px;
 }
 
+.nav > h1 {
+  font-weight: 700;
+}
+
 .nav > h1 > span {
+  font-weight: 400;
   color: var(--color-highlight-400);
   text-transform: lowercase;
 }
