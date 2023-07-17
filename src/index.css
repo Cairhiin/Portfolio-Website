@@ -144,7 +144,7 @@ table {
   --color-300: hsl(214 16% 25% / 1);
   --color-400: hsl(213 20% 17% / 1);
   --color-600: hsl(213 14% 12% / 1);
-  --color-700: hsl(213 5% 5% / 1);
+  --color-700: hsl(213 10% 10% / 1);
   --color-highlight-400: hsl(210 96% 48% / 1);
 
   --line-height-400: 1.4;
@@ -206,12 +206,4 @@ p {
 
 section {
   background-color: var(--color-600);
-}
-
-#projects {
-  background-image: url("assets/skills-bg.jpg");
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: 250%;
 }

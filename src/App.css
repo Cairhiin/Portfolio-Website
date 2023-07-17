@@ -1,0 +1,15 @@
+#skills {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  padding-block-end: 2rem;
+  padding-block-start: calc(2rem + 75px / 2);
+}
+
+#projects {
+  background-image: url("assets/skills-bg.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 250%;
+}

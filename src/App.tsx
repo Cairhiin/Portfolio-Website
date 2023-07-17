@@ -3,6 +3,7 @@ import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 import Card from "./components/Card";
 import Hero from "./components/Hero";
 import Nav from "./components/nav";
+import "./App.css";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
               <li>Sass</li>
               <li>TypeScript</li>
               <li>NextJS</li>
+              <li>TailwindCSS</li>
             </ul>
           </Card>
           <Card title="Other" icon={faDev}>

@@ -1,0 +1,45 @@
+.card {
+  --_card-width: 200px;
+  --_icon-size: 75px;
+  --_padding: 2rem;
+  width: var(--_card-width);
+  background-color: var(--color-700);
+  padding-block-start: calc(var(--_icon-size) / 2 + 1rem);
+  padding-block-end: 1rem;
+  padding-inline: var(--_padding);
+  border-radius: 8px;
+  position: relative;
+}
+
+.card > *:not(:last-child) {
+  padding-block-end: 1em;
+}
+
+.card-title {
+  color: var(--color-200);
+  text-align: center;
+}
+
+.card-icon {
+  display: grid;
+  place-content: center;
+  width: var(--_icon-size);
+  height: var(--_icon-size);
+  background-color: var(--color-400);
+  border-radius: 50%;
+  color: var(--color-200);
+  font-size: 2rem;
+  position: absolute;
+  outline: 5px solid var(--color-600);
+  left: calc(var(--_padding) + (var(--_card-width) - var(--_icon-size)) / 2);
+  top: calc(-1 * ((var(--_icon-size))) / 2);
+}
+
+.card-content ul {
+  margin-left: 1rem;
+}
+
+.card-content ul li::marker {
+  content: "\2714\0020";
+  color: var(--color-200);
+}
