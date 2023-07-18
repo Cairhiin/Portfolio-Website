@@ -1,9 +1,12 @@
 #skills {
-  display: flex;
-  gap: 4rem;
-  justify-content: center;
-  padding-block-start: calc(var(--spacing-900) + 75px / 2);
+  padding-block-start: var(--spacing-900);
   padding-block-end: var(--spacing-900);
+}
+
+#skills h2 {
+  text-align: center;
+  font-size: var(--fs-900);
+  margin-bottom: 1.5em;
 }
 
 #projects {
@@ -14,7 +17,22 @@
   background-size: 250%;
 }
 
+.flex-container {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+}
+
 .container {
   margin: 0 auto;
   max-width: 75ch;
+}
+
+.decorated-header {
+  font-size: var(--fs-400);
+  color: var(--color-200);
+  border-left: 6px solid var(--color-highlight-400);
+  margin-bottom: 1em;
+  padding-inline: var(--spacing-200);
+  display: inline-block;
 }

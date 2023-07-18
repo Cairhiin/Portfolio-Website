@@ -1,6 +1,4 @@
-import { faCss3, faDev } from "@fortawesome/free-brands-svg-icons";
-import { faDatabase } from "@fortawesome/free-solid-svg-icons";
-import Card from "./components/Card";
+import CardList from "./CardList";
 import Hero from "./components/Hero";
 import Nav from "./components/nav";
 import "./App.css";
@@ -12,35 +10,10 @@ function App() {
       <Hero />
       <main>
         <section id="skills">
-          <Card title="Backend" icon={faDatabase}>
-            <ul>
-              <li>NodeJS</li>
-              <li>ExpressJS</li>
-              <li>Mongoose</li>
-              <li>PHP</li>
-              <li>Laravel</li>
-              <li>MySQL</li>
-            </ul>
-          </Card>
-          <Card title="Frontend" icon={faCss3}>
-            <ul>
-              <li>React</li>
-              <li>Angular</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Sass</li>
-              <li>TypeScript</li>
-              <li>NextJS</li>
-              <li>TailwindCSS</li>
-            </ul>
-          </Card>
-          <Card title="Other" icon={faDev}>
-            <ul>
-              <li>C++</li>
-              <li>Figma</li>
-              <li>WordPress</li>
-            </ul>
-          </Card>
+          <h2>Skills</h2>
+          <div className="flex-container">
+            <CardList />
+          </div>
         </section>
         <section id="projects">
           <div className="container">
