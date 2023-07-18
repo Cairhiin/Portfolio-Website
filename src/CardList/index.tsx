@@ -1,9 +1,9 @@
+import { faCss3, faDev } from "@fortawesome/free-brands-svg-icons";
 import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Card from "../components/Card";
 import "./index.css";
-import { faCss3, faDev } from "@fortawesome/free-brands-svg-icons";
 
 interface CardListData {
   backend: { icon: IconProp; data: Array<string> };
@@ -12,6 +12,11 @@ interface CardListData {
 }
 
 export default function CardList(): JSX.Element {
+  const shouldReduceMotion = useReducedMotion();
+  const blur: number = shouldReduceMotion ? 0 : 20;
+  const transformX: number = shouldReduceMotion ? 0 : -100;
+  const delay: number = shouldReduceMotion ? 0 : 0.1;
+
   const list = {
     visible: { opacity: 1 },
     hidden: { opacity: 0 },
@@ -54,11 +59,15 @@ export default function CardList(): JSX.Element {
                 (item: string, index: number): JSX.Element => (
                   <motion.li
                     key={item}
-                    initial={{ opacity: 0, x: -100, filter: "blur(20px)" }}
+                    initial={{
+                      opacity: 0,
+                      x: transformX,
+                      filter: `blur(${blur}px)`,
+                    }}
                     whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
                     transition={{
                       duration: 0.3,
-                      delay: 0.1 * index,
+                      delay: delay * index,
                     }}
                   >
                     {item}
