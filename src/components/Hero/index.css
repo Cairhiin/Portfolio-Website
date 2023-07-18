@@ -1,10 +1,7 @@
 .hero {
   position: relative;
-  display: flex;
-  align-items: center;
-  gap: 4rem;
-  padding-block: var(--spacing-900);
   padding-inline: var(--spacing-800);
+  padding-block: var(--spacing-900);
 }
 
 .hero::before {
@@ -19,14 +16,23 @@
   background-image: url("../../assets/hero-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-.hero > * {
+.hero-layout {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.hero-layout > * {
   flex: 1;
 }
 
 .hero-title {
-  font-size: var(--fs-800);
+  font-size: var(--fs-900);
   text-transform: none;
   text-wrap: balance;
 }
@@ -54,8 +60,9 @@
 }
 
 .hero-content > h3 {
+  font-size: var(--fs-500);
   color: var(--color-200);
-  border-left: 4px solid var(--color-200);
+  border-left: 6px solid var(--color-highlight-400);
   margin-bottom: 1em;
   padding-inline: var(--spacing-200);
 }

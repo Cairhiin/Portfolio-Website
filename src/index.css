@@ -139,30 +139,31 @@ table {
   --fs-800: clamp(2.07rem, calc(1.94rem + 0.65vw), 2.75rem);
   --fs-900: clamp(2.49rem, calc(2.31rem + 0.91vw), 3.43rem);
 
-  --color-100: hsl(0 100% 100% / 1);
+  --color-000: hsl(209 67% 86% / 1);
+  --color-100: hsl(250 44% 95% / 1);
   --color-200: hsl(213 20% 65% / 1);
   --color-300: hsl(214 16% 25% / 1);
   --color-400: hsl(213 20% 17% / 1);
   --color-600: hsl(213 14% 12% / 1);
   --color-700: hsl(213 10% 10% / 1);
-  --color-highlight-400: hsl(210 96% 48% / 1);
+  --color-highlight-400: hsl(210, 83%, 50%);
 
-  --line-height-400: 1.4;
+  --line-height-400: 1.6;
   --spacing-200: clamp(0.69rem, calc(0.69rem + 0.02vw), 0.72rem);
   --spacing-300: clamp(0.83rem, calc(0.82rem + 0.06vw), 0.9rem);
   --spacing-400: clamp(1rem, calc(0.98rem + 0.12vw), 1.13rem);
   --spacing-500: clamp(1.2rem, calc(1.16rem + 0.2vw), 1.41rem);
   --spacing-600: clamp(1.44rem, calc(1.38rem + 0.31vw), 1.76rem);
   --spacing-700: clamp(1.73rem, calc(1.64rem + 0.45vw), 2.2rem);
-  --spacing-800: clamp(2.07rem, calc(1.94rem + 0.65vw), 2.75rem);
-  --spacing-900: clamp(2.49rem, calc(2.31rem + 0.91vw), 3.43rem);
+  --spacing-800: clamp(3rem, calc(1.94rem + 0.65vw), 4rem);
+  --spacing-900: clamp(5rem, calc(2.31rem + 0.91vw), 6rem);
 }
 
 body {
   background-color: var(--color-400);
   color: var(--color-100);
   font-size: var(--fs-400);
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: var(--line-height-400);
   background: linear-gradient(var(--color-400), var(--color-600));
 }
@@ -186,6 +187,7 @@ body::-webkit-scrollbar-thumb {
 h1,
 h2,
 h3 {
+  font-family: "Roboto Condensed", sans-serif;
   font-size: var(--fs-600);
   font-weight: 700;
   text-transform: uppercase;
@@ -199,7 +201,11 @@ h3 {
   font-size: var(--fs-400);
 }
 
-section,
+section {
+  padding-block: var(--spacing-900);
+  padding-inline: var(--spacing-700);
+}
+
 p {
   margin-bottom: 1em;
 }
