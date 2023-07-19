@@ -1,15 +1,7 @@
-import { faCss3, faDev } from "@fortawesome/free-brands-svg-icons";
-import { faDatabase } from "@fortawesome/free-solid-svg-icons";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { motion, useReducedMotion } from "framer-motion";
 import Card from "../components/Card";
+import { cardListData } from "../constants";
 import "./index.css";
-
-interface CardListData {
-  backend: { icon: IconProp; data: Array<string> };
-  frontend: { icon: IconProp; data: Array<string> };
-  other: { icon: IconProp; data: Array<string> };
-}
 
 export default function CardList(): JSX.Element {
   const shouldReduceMotion = useReducedMotion();
@@ -21,26 +13,7 @@ export default function CardList(): JSX.Element {
     visible: { opacity: 1 },
     hidden: { opacity: 0 },
   };
-  const cardListData: CardListData = {
-    backend: {
-      icon: faDatabase,
-      data: ["NodeJS", "ExpressJS", "Mongoose", "PHP", "Laravel", "MySQL"],
-    },
-    frontend: {
-      icon: faCss3,
-      data: [
-        "React",
-        "Angular",
-        "HTML",
-        "CSS",
-        "Sass",
-        "TypeScript",
-        "NextJS",
-        "TailwindCSS",
-      ],
-    },
-    other: { icon: faDev, data: ["C++", "Figma", "WordPress"] },
-  };
+
   return (
     <div className="flex-container">
       {Object.keys(cardListData).map(

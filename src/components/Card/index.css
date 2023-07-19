@@ -5,7 +5,12 @@
   display: grid;
   grid-template-rows: 1fr 2fr;
   width: var(--_card-width);
-  background-color: var(--color-700);
+  background-image: radial-gradient(
+    farthest-corner at 0px 20px,
+    var(--color-700) 70%,
+    var(--color-600) 90%,
+    var(--color-500) 100%
+  );
   padding-block-end: 1rem;
   padding-inline: var(--_padding);
   border-radius: 8px;

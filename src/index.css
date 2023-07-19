@@ -144,9 +144,11 @@ table {
   --color-200: hsl(213 20% 65% / 1);
   --color-300: hsl(214 16% 25% / 1);
   --color-400: hsl(213 20% 17% / 1);
+  --color-500: hsl(213 15% 15% / 1);
   --color-600: hsl(213 14% 12% / 1);
   --color-700: hsl(213 10% 10% / 1);
-  --color-highlight-400: hsl(210, 83%, 50%);
+  --color-800: hsl(213 5% 5% / 1);
+  --color-highlight-400: hsl(210 83% 50% / 1);
 
   --line-height-400: 1.6;
   --spacing-200: clamp(0.69rem, calc(0.69rem + 0.02vw), 0.72rem);
