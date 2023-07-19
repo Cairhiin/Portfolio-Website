@@ -1,6 +1,7 @@
 import CardList from "./CardList";
 import Hero from "./components/Hero";
 import Nav from "./components/nav";
+import ProjectsGrid from "./components/ProjectsGrid";
 import "./App.css";
 
 function App() {
@@ -16,16 +17,7 @@ function App() {
           </div>
         </section>
         <section id="projects">
-          <div className="container">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt,
-            similique deserunt! Delectus facere architecto deserunt in
-            distinctio illo quam, libero sit repudiandae voluptatem repellendus
-            enim ratione nostrum eos sapiente voluptate. Neque dolor quis ipsa
-            error sit ullam assumenda architecto necessitatibus, vitae
-            consectetur magni perferendis sunt temporibus, at ratione nihil
-            autem. Ipsum facere eveniet dicta repellat incidunt et quas. Nulla,
-            fugiat. Exercitationem provident nisi hic quae?
-          </div>
+          <ProjectsGrid />
         </section>
         <section id="contact">
           Aspernatur ad maxime placeat porro ipsam beatae. Provident

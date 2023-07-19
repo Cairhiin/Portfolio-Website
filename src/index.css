@@ -129,6 +129,12 @@ table {
   border-spacing: 0;
 }
 
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
 :root {
   --fs-200: clamp(0.69rem, calc(0.69rem + 0.02vw), 0.72rem);
   --fs-300: clamp(0.83rem, calc(0.82rem + 0.06vw), 0.9rem);
@@ -162,12 +168,11 @@ table {
 }
 
 body {
-  background-color: var(--color-400);
+  background-color: var(--color-600);
   color: var(--color-100);
   font-size: var(--fs-400);
   font-family: "Roboto", sans-serif;
   line-height: var(--line-height-400);
-  background: linear-gradient(var(--color-400), var(--color-600));
 }
 
 body::-webkit-scrollbar {
@@ -213,5 +218,5 @@ p {
 }
 
 section {
-  background-color: var(--color-600);
+  background-color: inherit;
 }

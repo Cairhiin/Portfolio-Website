@@ -1,0 +1,30 @@
+.projects,
+.projects-scroller {
+  display: grid;
+  gap: 0.5rem;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+
+.projects-scroller {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  grid-auto-columns: 100%;
+  padding: 0 3rem;
+  scroll-padding-inline: 3rem;
+}
+
+.projects {
+  grid-auto-columns: 1fr;
+}
+
+.projects > .project {
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.projects .project-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
