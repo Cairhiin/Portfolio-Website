@@ -9,6 +9,24 @@ export const projectsData: ProjectsData[] = [
     content: "A C++ and SDL game",
     links: [{ icon: faGitlab, url: "" }],
   },
+  {
+    name: "Cats",
+    img: "/assets/project1.jpg",
+    content: "A C++ and SDL game",
+    links: [{ icon: faGitlab, url: "" }],
+  },
+  {
+    name: "Cats",
+    img: "/assets/project1.jpg",
+    content: "A C++ and SDL game",
+    links: [{ icon: faGitlab, url: "" }],
+  },
+  {
+    name: "Cats",
+    img: "/assets/project1.jpg",
+    content: "A C++ and SDL game",
+    links: [{ icon: faGitlab, url: "" }],
+  },
 ];
 
 export const cardListData: CardListData = {
