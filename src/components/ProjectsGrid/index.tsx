@@ -1,16 +1,18 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { projectsData } from "../../constants";
 import "./index.css";
 import { ProjectsData } from "../../types";
 
 export default function ProjectsGrid(): JSX.Element {
   const [activeIndex, setActiveIndex] = useState<number>(1);
+  const projectsSlide1 = useRef<HTMLDivElement>(null);
+  const projectsSlide2 = useRef<HTMLDivElement>(null);
 
   const moveToNextSlide: () => void = () => {
     if (activeIndex < 2) {
       setActiveIndex((activeIndex) => activeIndex + 1);
     }
-    console.log(activeIndex);
+    projectsSlide2.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   const moveToPrevSlide: () => void = () => {
@@ -23,10 +25,7 @@ export default function ProjectsGrid(): JSX.Element {
   return (
     <div className="projects-wrapper">
       <div className="projects-scroller">
-        <div
-          className={activeIndex === 1 ? "projects active" : "projects"}
-          id="group-1"
-        >
+        <div className="projects" id="group-1" ref={projectsSlide1}>
           {projectsData.map(
             (project: ProjectsData): JSX.Element => (
               <div className="project">
@@ -39,24 +38,15 @@ export default function ProjectsGrid(): JSX.Element {
               </div>
             )
           )}
-          <a
-            className="next"
-            href="#group-2"
-            aria-label="next"
-            onClick={moveToNextSlide}
-          >
+          <a className="next" aria-label="next" onClick={moveToNextSlide}>
             <svg>
               <use href="#next"></use>
             </svg>
           </a>
         </div>
-        <div
-          className={activeIndex === 2 ? "projects active" : "projects"}
-          id="group-2"
-        >
+        <div className="projects" id="group-2" ref={projectsSlide2}>
           <a
             className="previous"
-            href="#group-1"
             aria-label="previous"
             onClick={moveToPrevSlide}
           >
@@ -96,11 +86,10 @@ export default function ProjectsGrid(): JSX.Element {
             <div className="project-content"></div>
             <div className="project-links"></div>
           </div>
-
-          <div className="projects-navigation">
-            <div></div>
-            <div></div>
-          </div>
+        </div>
+        <div className="projects-navigation">
+          <div className={activeIndex === 1 ? "active" : ""}></div>
+          <div className={activeIndex === 2 ? "active" : ""}></div>
         </div>
       </div>
       <svg>
