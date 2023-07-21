@@ -1,25 +1,21 @@
 .projects-wrapper {
   position: relative;
+  max-height: fit-content;
 }
 
 .projects,
 .projects-scroller {
   display: grid;
-  gap: 0.5rem;
+  column-gap: 0.5rem;
   grid-auto-flow: column;
-  grid-auto-columns: 1fr;
 }
 
 .projects-scroller {
-  overflow-x: hidden;
+  overflow: hidden;
   scroll-behavior: smooth;
   grid-auto-columns: 100%;
   padding: 0 3rem;
   scroll-padding-inline: 3rem;
-}
-
-.projects {
-  grid-auto-columns: 1fr;
 }
 
 .projects > .project {
@@ -40,7 +36,7 @@
   z-index: 10;
   position: absolute;
   width: 3rem;
-  padding: 1rem;
+  padding-block: 1rem;
   background: rgb(0 0 0 / 0);
   opacity: 0;
 }
@@ -65,17 +61,18 @@
   opacity: 1;
 }
 
-:where(.next, .previous):hover {
+.next:where(.next):hover,
+.previous:where(.previous):hover {
   background: rgb(0 0 0 / 0.3);
 }
 
 :where(.next, .previous) > svg {
   transition: transform 75ms linear;
-  transform: scale(1);
+  transform: scale(0.5);
 }
 
 :where(.next, .previous):hover > svg {
-  transform: scale(1.2);
+  transform: scale(0.8);
 }
 
 .projects-scroller:target :where(.next, .previous) {

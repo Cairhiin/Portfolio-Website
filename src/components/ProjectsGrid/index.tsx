@@ -29,77 +29,79 @@ export default function ProjectsGrid(): JSX.Element {
   };
 
   return (
-    <div className="projects-wrapper">
-      <div className="projects-scroller">
-        <div className="projects" id="group-1" ref={projectsSlide1}>
-          {projectsData.map(
-            (project: ProjectsData): JSX.Element => (
-              <div className="project">
-                <div className="project-image">
-                  <img src="./src/assets/hero-bg.jpg" />
+    <>
+      <div className="projects-wrapper">
+        <div className="projects-scroller">
+          <div className="projects" id="group-1" ref={projectsSlide1}>
+            {projectsData.map(
+              (project: ProjectsData): JSX.Element => (
+                <div className="project">
+                  <div className="project-image">
+                    <img src="./src/assets/hero-bg.jpg" />
+                  </div>
+                  <div className="project-header"></div>
+                  <div className="project-content"></div>
+                  <div className="project-links"></div>
                 </div>
-                <div className="project-header"></div>
-                <div className="project-content"></div>
-                <div className="project-links"></div>
+              )
+            )}
+            <div
+              className={activeIndex === 1 ? "next flex" : "next"}
+              aria-label="next"
+              onClick={moveToNextSlide}
+            >
+              <svg>
+                <use href="#next"></use>
+              </svg>
+            </div>
+          </div>
+          <div className="projects" id="group-2" ref={projectsSlide2}>
+            <div
+              className={activeIndex === 2 ? "previous flex" : "previous"}
+              aria-label="previous"
+              onClick={moveToPrevSlide}
+            >
+              <svg>
+                <use href="#previous"></use>
+              </svg>
+            </div>
+            <div className="project">
+              <div className="project-image">
+                <img src="./src/assets/hero-bg.jpg" />
               </div>
-            )
-          )}
-          <div
-            className={activeIndex === 1 ? "next flex" : "next"}
-            aria-label="next"
-            onClick={moveToNextSlide}
-          >
-            <svg>
-              <use href="#next"></use>
-            </svg>
-          </div>
-        </div>
-        <div className="projects" id="group-2" ref={projectsSlide2}>
-          <div
-            className={activeIndex === 2 ? "previous flex" : "previous"}
-            aria-label="previous"
-            onClick={moveToPrevSlide}
-          >
-            <svg>
-              <use href="#previous"></use>
-            </svg>
-          </div>
-          <div className="project">
-            <div className="project-image">
-              <img src="./src/assets/hero-bg.jpg" />
+              <div className="project-header"></div>
+              <div className="project-content"></div>
+              <div className="project-links"></div>
             </div>
-            <div className="project-header"></div>
-            <div className="project-content"></div>
-            <div className="project-links"></div>
-          </div>
-          <div className="project">
-            <div className="project-image">
-              <img src="./src/assets/hero-bg.jpg" />
+            <div className="project">
+              <div className="project-image">
+                <img src="./src/assets/hero-bg.jpg" />
+              </div>
+              <div className="project-header"></div>
+              <div className="project-content"></div>
+              <div className="project-links"></div>
             </div>
-            <div className="project-header"></div>
-            <div className="project-content"></div>
-            <div className="project-links"></div>
-          </div>
-          <div className="project">
-            <div className="project-image">
-              <img src="./src/assets/hero-bg.jpg" />
+            <div className="project">
+              <div className="project-image">
+                <img src="./src/assets/hero-bg.jpg" />
+              </div>
+              <div className="project-header"></div>
+              <div className="project-content"></div>
+              <div className="project-links"></div>
             </div>
-            <div className="project-header"></div>
-            <div className="project-content"></div>
-            <div className="project-links"></div>
-          </div>
-          <div className="project">
-            <div className="project-image">
-              <img src="./src/assets/hero-bg.jpg" />
+            <div className="project">
+              <div className="project-image">
+                <img src="./src/assets/hero-bg.jpg" />
+              </div>
+              <div className="project-header"></div>
+              <div className="project-content"></div>
+              <div className="project-links"></div>
             </div>
-            <div className="project-header"></div>
-            <div className="project-content"></div>
-            <div className="project-links"></div>
           </div>
-        </div>
-        <div className="projects-navigation">
-          <div className={activeIndex === 1 ? "active" : ""}></div>
-          <div className={activeIndex === 2 ? "active" : ""}></div>
+          <div className="projects-navigation">
+            <div className={activeIndex === 1 ? "active" : ""}></div>
+            <div className={activeIndex === 2 ? "active" : ""}></div>
+          </div>
         </div>
       </div>
       <svg>
@@ -117,6 +119,6 @@ export default function ProjectsGrid(): JSX.Element {
           />
         </symbol>
       </svg>
-    </div>
+    </>
   );
 }
