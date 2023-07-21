@@ -57,7 +57,7 @@
   bottom: 0;
 }
 
-.projects:first-child :where(.next, .previous) {
+.projects .flex {
   display: flex;
 }
 

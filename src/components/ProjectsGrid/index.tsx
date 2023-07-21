@@ -12,14 +12,20 @@ export default function ProjectsGrid(): JSX.Element {
     if (activeIndex < 2) {
       setActiveIndex((activeIndex) => activeIndex + 1);
     }
-    projectsSlide2.current?.scrollIntoView({ behavior: "smooth" });
+    projectsSlide2.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+    });
   };
 
   const moveToPrevSlide: () => void = () => {
     if (activeIndex > 0) {
       setActiveIndex((activeIndex) => activeIndex - 1);
     }
-    console.log(activeIndex);
+    projectsSlide1.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+    });
   };
 
   return (
@@ -38,22 +44,26 @@ export default function ProjectsGrid(): JSX.Element {
               </div>
             )
           )}
-          <a className="next" aria-label="next" onClick={moveToNextSlide}>
+          <div
+            className={activeIndex === 1 ? "next flex" : "next"}
+            aria-label="next"
+            onClick={moveToNextSlide}
+          >
             <svg>
               <use href="#next"></use>
             </svg>
-          </a>
+          </div>
         </div>
         <div className="projects" id="group-2" ref={projectsSlide2}>
-          <a
-            className="previous"
+          <div
+            className={activeIndex === 2 ? "previous flex" : "previous"}
             aria-label="previous"
             onClick={moveToPrevSlide}
           >
             <svg>
               <use href="#previous"></use>
             </svg>
-          </a>
+          </div>
           <div className="project">
             <div className="project-image">
               <img src="./src/assets/hero-bg.jpg" />
