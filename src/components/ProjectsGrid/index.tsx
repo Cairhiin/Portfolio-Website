@@ -34,7 +34,7 @@ export default function ProjectsGrid(): JSX.Element {
     <>
       <div className="projects-wrapper">
         <div className="projects-scroller">
-          <div className="projects">
+          <div className="projects" ref={projectsSlide1}>
             {projectsData.map(
               (project: ProjectsData): JSX.Element => (
                 <div className="project">
@@ -85,6 +85,8 @@ export default function ProjectsGrid(): JSX.Element {
                 <use href="#previous"></use>
               </svg>
             </div>
+          </div>
+          <div className="projects" ref={projectsSlide2}>
             <div className="project">
               <div className="project-image">
                 <img src="./src/assets/hero-bg.jpg" />
