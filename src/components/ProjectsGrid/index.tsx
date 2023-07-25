@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { projectsData } from "../../constants";
 import "./index.css";
 import { ProjectsData } from "../../types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function ProjectsGrid(): JSX.Element {
   const [activeIndex, setActiveIndex] = useState<number>(1);
@@ -39,9 +40,21 @@ export default function ProjectsGrid(): JSX.Element {
                   <div className="project-image">
                     <img src="./src/assets/hero-bg.jpg" />
                   </div>
-                  <div className="project-header"></div>
-                  <div className="project-content"></div>
-                  <div className="project-links"></div>
+                  <div className="content">
+                    <div className="project-header">{project.name}</div>
+                    <div className="project-content">{project.content}</div>
+                    <div className="project-links">
+                      <ul>
+                        {project.links.map(
+                          (link): JSX.Element => (
+                            <li>
+                              <FontAwesomeIcon icon={link.icon} />
+                            </li>
+                          )
+                        )}
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               )
             )}
