@@ -1,13 +1,10 @@
 .projects-wrapper {
   position: relative;
-  max-height: fit-content;
 }
 
 .projects,
 .projects-scroller {
-  display: grid;
-  column-gap: 0.5rem;
-  grid-auto-flow: column;
+  display: inline-block;
 }
 
 .projects-scroller {
@@ -16,9 +13,13 @@
   grid-auto-columns: 100%;
   padding: 0 3rem;
   scroll-padding-inline: 3rem;
+  white-space: nowrap;
 }
 
 .projects > .project {
+  display: inline-block;
+  padding-inline: 0.2rem;
+  width: 25%;
   border-radius: 0.25rem;
   overflow: hidden;
   position: relative;

@@ -3,6 +3,7 @@ import { projectsData } from "../../constants";
 import "./index.css";
 import { ProjectsData } from "../../types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 export default function ProjectsGrid(): JSX.Element {
   const [activeIndex, setActiveIndex] = useState<number>(1);
@@ -33,7 +34,7 @@ export default function ProjectsGrid(): JSX.Element {
     <>
       <div className="projects-wrapper">
         <div className="projects-scroller">
-          <div className="projects" id="group-1" ref={projectsSlide1}>
+          <div className="projects">
             {projectsData.map(
               (project: ProjectsData): JSX.Element => (
                 <div className="project">
@@ -46,10 +47,18 @@ export default function ProjectsGrid(): JSX.Element {
                     <div className="project-links">
                       <ul>
                         {project.links.map(
-                          (link): JSX.Element => (
-                            <li>
-                              <FontAwesomeIcon icon={link.icon} />
-                            </li>
+                          ({
+                            url,
+                            icon,
+                          }: {
+                            url: string;
+                            icon: IconProp;
+                          }): JSX.Element => (
+                            <a href={url}>
+                              <li>
+                                <FontAwesomeIcon icon={icon} />
+                              </li>
+                            </a>
                           )
                         )}
                       </ul>
@@ -67,8 +76,6 @@ export default function ProjectsGrid(): JSX.Element {
                 <use href="#next"></use>
               </svg>
             </div>
-          </div>
-          <div className="projects" id="group-2" ref={projectsSlide2}>
             <div
               className={activeIndex === 2 ? "previous flex" : "previous"}
               aria-label="previous"
