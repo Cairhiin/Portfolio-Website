@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from "framer-motion";
-import Card from "../components/Card";
-import { cardListData } from "../constants";
+import Card from "../Card";
+import { cardListData } from "../../constants";
 import "./index.css";
 
 export default function CardList(): JSX.Element {

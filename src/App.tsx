@@ -1,4 +1,4 @@
-import CardList from "./CardList";
+import CardList from "./components/CardList";
 import Hero from "./components/Hero";
 import Nav from "./components/nav";
 import ProjectsGrid from "./components/ProjectsGrid";
