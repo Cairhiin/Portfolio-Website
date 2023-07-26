@@ -10,5 +10,10 @@ export interface ProjectsData {
   name: string;
   img: string;
   content: string;
-  links: { icon: IconProp; url: string }[];
+  links: Link[];
+}
+
+export interface Link {
+  url: string;
+  icon: IconProp;
 }

@@ -1,0 +1,7 @@
+.card-modal {
+  display: none;
+}
+
+.card-modal.active {
+  display: flex;
+}

@@ -5,25 +5,25 @@ import type { CardListData, ProjectsData } from "../types";
 export const projectsData: ProjectsData[] = [
   {
     name: "Cats",
-    img: "/assets/project1.jpg",
+    img: "./src/assets/hero-bg.jpg",
     content: "A C++ and SDL game",
     links: [{ icon: faGitlab, url: "" }],
   },
   {
     name: "Cats",
-    img: "/assets/project1.jpg",
+    img: "./src/assets/hero-bg.jpg",
     content: "A C++ and SDL game",
     links: [{ icon: faGitlab, url: "" }],
   },
   {
     name: "Cats",
-    img: "/assets/project1.jpg",
+    img: "./src/assets/hero-bg.jpg",
     content: "A C++ and SDL game",
     links: [{ icon: faGitlab, url: "" }],
   },
   {
     name: "Cats",
-    img: "/assets/project1.jpg",
+    img: "./src/assets/hero-bg.jpg",
     content: "A C++ and SDL game",
     links: [{ icon: faGitlab, url: "" }],
   },

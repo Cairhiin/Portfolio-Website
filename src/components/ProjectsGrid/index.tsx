@@ -1,9 +1,8 @@
 import { useRef, useState } from "react";
 import { projectsData } from "../../constants";
+import { Link, ProjectsData } from "../../types";
+import ProjectModal from "../ProjectModal";
 import "./index.css";
-import { ProjectsData } from "../../types";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 export default function ProjectsGrid(): JSX.Element {
   const [activeIndex, setActiveIndex] = useState<number>(1);
@@ -30,6 +29,39 @@ export default function ProjectsGrid(): JSX.Element {
     });
   };
 
+  const Project: ({
+    image,
+    name,
+    content,
+    links,
+  }: {
+    image: string;
+    name: string;
+    content: string;
+    links: Link[];
+  }) => JSX.Element = ({ image, name, content, links }) => {
+    const [isShowing, setIsShowing] = useState<boolean>(false);
+    return (
+      <div
+        className="project"
+        onMouseEnter={() => setIsShowing(true)}
+        onMouseLeave={() => setIsShowing(false)}
+      >
+        <div className="project-image">
+          <img src="./src/assets/hero-bg.jpg" />
+        </div>
+        <ProjectModal
+          image={image}
+          title={name}
+          links={links}
+          isShowing={isShowing}
+        >
+          {content}
+        </ProjectModal>
+      </div>
+    );
+  };
+
   return (
     <>
       <div className="projects-wrapper">
@@ -37,34 +69,12 @@ export default function ProjectsGrid(): JSX.Element {
           <div className="projects" ref={projectsSlide1}>
             {projectsData.map(
               (project: ProjectsData): JSX.Element => (
-                <div className="project">
-                  <div className="project-image">
-                    <img src="./src/assets/hero-bg.jpg" />
-                  </div>
-                  <div className="content">
-                    <div className="project-header">{project.name}</div>
-                    <div className="project-content">{project.content}</div>
-                    <div className="project-links">
-                      <ul>
-                        {project.links.map(
-                          ({
-                            url,
-                            icon,
-                          }: {
-                            url: string;
-                            icon: IconProp;
-                          }): JSX.Element => (
-                            <a href={url}>
-                              <li>
-                                <FontAwesomeIcon icon={icon} />
-                              </li>
-                            </a>
-                          )
-                        )}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+                <Project
+                  image={project.img}
+                  content={project.content}
+                  title={project.name}
+                  links={project.links}
+                />
               )
             )}
             <div
