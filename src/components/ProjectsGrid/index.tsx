@@ -31,15 +31,15 @@ export default function ProjectsGrid(): JSX.Element {
 
   const Project: ({
     image,
-    name,
+    title,
     content,
     links,
   }: {
     image: string;
-    name: string;
+    title: string;
     content: string;
     links: Link[];
-  }) => JSX.Element = ({ image, name, content, links }) => {
+  }) => JSX.Element = ({ image, title, content, links }) => {
     const [isShowing, setIsShowing] = useState<boolean>(false);
     return (
       <div
@@ -52,7 +52,7 @@ export default function ProjectsGrid(): JSX.Element {
         </div>
         <ProjectModal
           image={image}
-          title={name}
+          title={title}
           links={links}
           isShowing={isShowing}
         >
