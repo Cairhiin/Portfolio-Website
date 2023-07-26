@@ -1,5 +1,4 @@
 .projects-wrapper {
-  position: relative;
   max-height: fit-content;
 }
 
@@ -14,13 +13,12 @@
   overflow: hidden;
   scroll-behavior: smooth;
   grid-auto-columns: 100%;
-  padding: 0 3rem;
+  padding: 6rem 3rem;
   scroll-padding-inline: 3rem;
 }
 
 .projects > .project {
   border-radius: 0.25rem;
-  overflow: hidden;
   position: relative;
 }
 

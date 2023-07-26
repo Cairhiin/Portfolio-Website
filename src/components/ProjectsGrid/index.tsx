@@ -41,6 +41,7 @@ export default function ProjectsGrid(): JSX.Element {
     links: Link[];
   }) => JSX.Element = ({ image, title, content, links }) => {
     const [isShowing, setIsShowing] = useState<boolean>(false);
+
     return (
       <div
         className="project"

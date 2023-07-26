@@ -1,7 +1,27 @@
 .card-modal {
-  display: none;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  flex-direction: column;
+  background-color: var(--color-600);
+  position: absolute;
 }
 
 .card-modal.active {
-  display: flex;
+  z-index: 10;
+  width: fit-content;
+  height: 500px;
+  transform-origin: center center;
+  right: -100px;
+  transform: translateX(-50px) translateY(-50px) scaleX(1) scaleY(1)
+    translateZ(0px);
+  transition: all 500ms;
+}
+
+.card-modal.active > img {
+  object-fit: cover;
 }
