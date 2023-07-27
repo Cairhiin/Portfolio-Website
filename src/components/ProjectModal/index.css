@@ -8,6 +8,7 @@
   flex-direction: column;
   background-color: var(--color-700);
   position: absolute;
+  transform: skewY(125deg);
 }
 
 .card-modal.active {
@@ -15,9 +16,20 @@
   width: var(--_width);
   height: fit-content;
   transform-origin: center center;
-  transform: translateX(-50px) translateY(-50px) scaleX(1) scaleY(1)
-    translateZ(0px);
-  transition: all 500ms;
+  transform: translateX(-50px) translateY(-50px) skewY(0);
+  transition: all 500ms ease-out;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+@media (prefers-reduced-motion) {
+  .card-modal {
+    transform: skewY(0);
+  }
+
+  .card-modal.active {
+    transform: translateX(-50px) translateY(-50px);
+    transition: all 200ms ease-out;
+  }
 }
 
 .card-modal h3 {
