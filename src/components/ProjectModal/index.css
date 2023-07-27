@@ -1,27 +1,50 @@
 .card-modal {
   display: flex;
   top: 0;
-  left: 0;
-  right: 0;
+  left: var(--_xPos);
   width: 0;
   height: 0;
   overflow: hidden;
   flex-direction: column;
-  background-color: var(--color-600);
+  background-color: var(--color-700);
   position: absolute;
 }
 
 .card-modal.active {
   z-index: 10;
-  width: fit-content;
-  height: 500px;
+  width: var(--_width);
+  height: fit-content;
   transform-origin: center center;
-  right: -100px;
   transform: translateX(-50px) translateY(-50px) scaleX(1) scaleY(1)
     translateZ(0px);
   transition: all 500ms;
 }
 
-.card-modal.active > img {
+.card-modal h3 {
+  font-size: var(--fs-500);
+  color: var(--color-highlight-400);
+}
+
+.card-modal > .card-modal-main {
+  font-size: var(--fs-300);
+  display: flex;
+  height: max-content;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.card-modal > .card-modal-main > .card-modal-links {
+  padding-top: 0.3em;
+  text-align: right;
+  font-size: var(--fs-500);
+}
+
+.card-modal a,
+.card-modal a:visited {
+  color: var(--color-100);
+}
+
+.card-modal > img {
   object-fit: cover;
 }

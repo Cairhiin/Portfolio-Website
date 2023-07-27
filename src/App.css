@@ -15,8 +15,6 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 250%;
-  position: relative;
-  padding-block: 0;
 }
 
 .flex-container {

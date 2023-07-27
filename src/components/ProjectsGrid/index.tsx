@@ -41,12 +41,19 @@ export default function ProjectsGrid(): JSX.Element {
     links: Link[];
   }) => JSX.Element = ({ image, title, content, links }) => {
     const [isShowing, setIsShowing] = useState<boolean>(false);
+    const [xPos, setXPos] = useState<number>(0);
+    const [width, setWidth] = useState<number>(0);
 
     return (
       <div
         className="project"
         onMouseEnter={() => setIsShowing(true)}
         onMouseLeave={() => setIsShowing(false)}
+        ref={(projectElement) => {
+          if (!projectElement) return;
+          setXPos(projectElement.getBoundingClientRect().left);
+          setWidth(projectElement.getBoundingClientRect().width);
+        }}
       >
         <div className="project-image">
           <img src="./src/assets/hero-bg.jpg" />
@@ -56,6 +63,7 @@ export default function ProjectsGrid(): JSX.Element {
           title={title}
           links={links}
           isShowing={isShowing}
+          data={{ xPos: xPos, width: width }}
         >
           {content}
         </ProjectModal>

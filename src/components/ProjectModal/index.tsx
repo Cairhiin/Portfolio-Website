@@ -8,6 +8,7 @@ interface Props {
   title: string;
   children: ReactNode;
   links: Link[];
+  data: { xPos: number; width: number };
   isShowing: boolean;
 }
 
@@ -16,21 +17,39 @@ export default function CardModal({
   title,
   children,
   links,
+  data,
   isShowing,
 }: Props): JSX.Element {
   return (
-    <div className={isShowing ? "card-modal active" : "card-modal"}>
-      <h3>{title}</h3>
+    <div
+      className={isShowing ? "card-modal active" : "card-modal"}
+      role="dialog"
+      aria-modal="true"
+      tabIndex={-1}
+      aria-labelledby="dialog-label"
+      aria-describedby="dialog-desc"
+      style={
+        {
+          "--_xPos": `${data.xPos}px`,
+          "--_width": `${data.width + 50}px`,
+        } as React.CSSProperties
+      }
+    >
       <img src={image} alt={title} />
-      <div className="card-modal-content">{children}</div>
-      <div className="card-modal-links">
-        {links.map(
-          ({ url, icon }: Link): JSX.Element => (
-            <a href={url}>
-              <FontAwesomeIcon icon={icon} />
-            </a>
-          )
-        )}
+      <div className="card-modal-main">
+        <h3 id="dialog-label">{title}</h3>
+        <div className="card-modal-content" id="dialog-desc">
+          {children}
+        </div>
+        <div className="card-modal-links">
+          {links.map(
+            ({ url, icon }: Link): JSX.Element => (
+              <a href={url}>
+                <FontAwesomeIcon icon={icon} />
+              </a>
+            )
+          )}
+        </div>
       </div>
     </div>
   );
