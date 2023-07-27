@@ -9,6 +9,8 @@
   background-color: var(--color-700);
   position: absolute;
   transform: skewY(125deg);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 5px;
 }
 
 .card-modal.active {
@@ -18,7 +20,6 @@
   transform-origin: center center;
   transform: translateX(-50px) translateY(-50px) skewY(0);
   transition: all 500ms ease-out;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 @media (prefers-reduced-motion) {

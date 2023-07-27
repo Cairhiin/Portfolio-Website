@@ -19,7 +19,8 @@
 }
 
 .projects > .project {
-  border-radius: 0.25rem;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
 .projects > .project .content {
