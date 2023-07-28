@@ -1,6 +1,6 @@
 .card-modal {
   display: flex;
-  top: 50px;
+  top: 100px;
   left: var(--_xPos);
   width: var(--_width);
   height: 0;
@@ -8,7 +8,6 @@
   flex-direction: column;
   background-color: var(--color-700);
   position: absolute;
-  /* transform: skewY(125deg); */
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   border-radius: 5px;
 }

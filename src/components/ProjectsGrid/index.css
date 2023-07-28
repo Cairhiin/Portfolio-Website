@@ -1,5 +1,6 @@
 .projects-wrapper {
   max-height: fit-content;
+  padding-block: var(--spacing-700);
 }
 
 .projects,
@@ -120,4 +121,8 @@
 
 .projects-scroller:hover .projects-navigation {
   opacity: 1;
+}
+
+#projects > svg {
+  height: 0;
 }

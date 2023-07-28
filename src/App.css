@@ -10,12 +10,22 @@
 }
 
 #projects {
-  background-image: url("assets/skills-bg.jpg");
+  position: relative;
+}
+
+#projects::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.05;
+  z-index: -1;
+  background-image: url("/src/assets/skills-bg.jpg");
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: 250%;
-  position: relative;
 }
 
 .flex-container {
