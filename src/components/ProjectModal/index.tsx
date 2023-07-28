@@ -31,7 +31,7 @@ export default function CardModal({
       style={
         {
           "--_xPos": `${data.xPos}px`,
-          "--_width": `${data.width + 50}px`,
+          "--_width": `${data.width}px`,
         } as React.CSSProperties
       }
     >

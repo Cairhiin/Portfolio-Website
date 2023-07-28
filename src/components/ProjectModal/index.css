@@ -1,25 +1,24 @@
 .card-modal {
   display: flex;
-  top: 0;
+  top: 50px;
   left: var(--_xPos);
-  width: 0;
+  width: var(--_width);
   height: 0;
   overflow: hidden;
   flex-direction: column;
   background-color: var(--color-700);
   position: absolute;
-  transform: skewY(125deg);
+  /* transform: skewY(125deg); */
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   border-radius: 5px;
 }
 
 .card-modal.active {
   z-index: 10;
-  width: var(--_width);
   height: fit-content;
   transform-origin: center center;
-  transform: translateX(-50px) translateY(-50px) skewY(0);
-  transition: all 500ms ease-out;
+  transform: scale(1.1) translateY(-20px);
+  transition: transform 500ms ease-out;
 }
 
 @media (prefers-reduced-motion) {
