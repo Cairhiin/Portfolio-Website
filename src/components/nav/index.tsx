@@ -1,8 +1,15 @@
 import { useEffect, useState } from "react";
+import { motion, useScroll, useSpring } from "framer-motion";
 import "./index.css";
 
 export default function Nav(): JSX.Element {
   const [scrollPosition, setScrollPosition] = useState<number>(0);
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 75,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -10,7 +17,7 @@ export default function Nav(): JSX.Element {
       setScrollPosition(position);
     };
     window.addEventListener("scroll", handleScroll);
-    console.log(scrollPosition);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -18,6 +25,7 @@ export default function Nav(): JSX.Element {
 
   return (
     <nav className={scrollPosition > 60 ? "nav backdrop" : "nav"}>
+      <motion.div className="progress-bar" style={{ scaleX: scaleX }} />
       <h1>
         <span>{"<h1>"}</span>Frank van de Voorde<span>{"</h1>"}</span>
       </h1>

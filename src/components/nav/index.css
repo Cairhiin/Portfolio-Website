@@ -48,3 +48,15 @@
 .nav li:hover {
   background-color: var(--color-400);
 }
+
+.nav .progress-bar {
+  position: absolute;
+  margin: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--color-highlight-400);
+  transform-origin: 0%;
+  z-index: 10;
+}
