@@ -1,5 +1,4 @@
 .projects-wrapper {
-  max-height: fit-content;
   padding-block: var(--spacing-700);
 }
 
@@ -39,8 +38,11 @@
   opacity: 0.5;
 }
 
+.projects img {
+  height: 100%;
+}
+
 .projects .project-image {
-  width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }

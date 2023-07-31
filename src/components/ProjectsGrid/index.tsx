@@ -56,7 +56,7 @@ export default function ProjectsGrid(): JSX.Element {
         }}
       >
         <div className="project-image">
-          <img src="./src/assets/hero-bg.jpg" />
+          <img src={image} />
         </div>
         <ProjectModal
           image={image}
@@ -77,14 +77,17 @@ export default function ProjectsGrid(): JSX.Element {
         <div className="projects-scroller">
           <div className="projects" ref={projectsSlide1}>
             {projectsData.map(
-              (project: ProjectsData): JSX.Element => (
-                <Project
-                  image={project.img}
-                  content={project.content}
-                  title={project.name}
-                  links={project.links}
-                />
-              )
+              (project: ProjectsData, index: number): JSX.Element | null => {
+                if (index >= 4) return null;
+                return (
+                  <Project
+                    image={project.img}
+                    content={project.content}
+                    title={project.name}
+                    links={project.links}
+                  />
+                );
+              }
             )}
             <div
               className={activeIndex === 1 ? "next flex" : "next"}
@@ -106,38 +109,32 @@ export default function ProjectsGrid(): JSX.Element {
             </div>
           </div>
           <div className="projects" ref={projectsSlide2}>
-            <div className="project">
-              <div className="project-image">
-                <img src="./src/assets/hero-bg.jpg" />
-              </div>
-              <div className="project-header"></div>
-              <div className="project-content"></div>
-              <div className="project-links"></div>
-            </div>
-            <div className="project">
-              <div className="project-image">
-                <img src="./src/assets/hero-bg.jpg" />
-              </div>
-              <div className="project-header"></div>
-              <div className="project-content"></div>
-              <div className="project-links"></div>
-            </div>
-            <div className="project">
-              <div className="project-image">
-                <img src="./src/assets/hero-bg.jpg" />
-              </div>
-              <div className="project-header"></div>
-              <div className="project-content"></div>
-              <div className="project-links"></div>
-            </div>
-            <div className="project">
-              <div className="project-image">
-                <img src="./src/assets/hero-bg.jpg" />
-              </div>
-              <div className="project-header"></div>
-              <div className="project-content"></div>
-              <div className="project-links"></div>
-            </div>
+            {projectsData.map(
+              (project: ProjectsData, index: number): JSX.Element | null => {
+                if (index < 4) return null;
+                return (
+                  <Project
+                    image={project.img}
+                    content={project.content}
+                    title={project.name}
+                    links={project.links}
+                  />
+                );
+              }
+            )}
+            {projectsData.map(
+              (project: ProjectsData, index: number): JSX.Element | null => {
+                if (index < 4) return null;
+                return (
+                  <Project
+                    image={project.img}
+                    content={project.content}
+                    title={project.name}
+                    links={project.links}
+                  />
+                );
+              }
+            )}
           </div>
           <div className="projects-navigation">
             <div className={activeIndex === 1 ? "active" : ""}></div>
