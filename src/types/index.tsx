@@ -7,10 +7,12 @@ export interface CardListData {
 }
 
 export interface ProjectsData {
+  id: number;
   name: string;
   img: string;
   content: string;
   links: Link[];
+  tech: string[];
 }
 
 export interface Link {
