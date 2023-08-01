@@ -1,0 +1,47 @@
+.accordion {
+  display: flex;
+  gap: 1rem;
+  --_padding: 0.5rem;
+  --_border-radius: 0.3rem;
+  --_icon-size: 2rem;
+}
+
+.accordion > .panel {
+  position: relative;
+  flex-basis: calc(var(--_padding) * 2 + var(--_icon-size));
+  overflow: hidden;
+  padding: var(--_padding);
+  padding-right: calc(var(--_padding) * 4);
+  border-radius: calc((var(--_padding) * 2) / 2);
+}
+
+.accordion .active {
+  flex-basis: clamp(15rem, 40vh, 20rem);
+  flex-grow: 1;
+}
+
+.accordion .accordion__title {
+  display: none;
+}
+
+.accordion .active .accordion__title {
+  display: block;
+}
+
+.accordion .accordion__icon {
+  width: var(--_icon-size);
+  font-size: var(--_icon-size);
+  color: var(--color-500);
+  z-index: 10;
+}
+
+.accordion .accordion__trigger {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  background-color: aqua;
+  border: none;
+  padding-block: var(--_padding);
+  padding-inline: calc(2 * var(--_padding));
+  border-radius: var(--_border-radius);
+}
