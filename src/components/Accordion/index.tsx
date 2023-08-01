@@ -46,11 +46,12 @@ const Accordion: ({ children, title, icon }: Props) => JSX.Element = ({
             </h3>
             <div
               id={`panel${index}__content`}
+              className="panel__content"
               aria-labelledby={`panel${index}__heading`}
               aria-hidden={activeIndex !== index}
               role="region"
             >
-              {activeIndex === index && panel}
+              {panel}
             </div>
           </div>
         )

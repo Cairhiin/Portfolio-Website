@@ -4,6 +4,11 @@ import Nav from "./components/nav";
 import ProjectsGrid from "./components/ProjectsGrid";
 import Accordion from "./components/Accordion";
 import Cats from "./assets/dungeonAndCats.png";
+import Border from "./assets/animatedBorderComponent.png";
+import Book from "./assets/bookrater.png";
+import Gloom from "./assets/gloomhaven.png";
+import Char from "./assets/dndCharCreator.png";
+
 import "./App.css";
 
 function App() {
@@ -31,20 +36,32 @@ function App() {
               <img src={Cats} alt="Cats" />
             </div>
             <div>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
-              non!
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Ducimus, non!
+              </p>
+              <img src={Border} alt="Cats" />
             </div>
             <div>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
-              non!
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Ducimus, non!
+              </p>
+              <img src={Book} alt="Cats" />
             </div>
             <div>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
-              non!
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Ducimus, non!
+              </p>
+              <img src={Gloom} alt="Cats" />
             </div>
             <div>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
-              non!
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Ducimus, non!
+              </p>
+              <img src={Char} alt="Cats" />
             </div>
           </Accordion>
         </section>
