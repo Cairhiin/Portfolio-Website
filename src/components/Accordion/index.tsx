@@ -16,6 +16,11 @@ const Accordion: ({ children, title, icon }: Props) => JSX.Element = ({
 }) => {
   const panels = Children.toArray(children);
   const [activeIndex, setActiveIndex] = useState<number>(0);
+
+  const handleClick: (index: number) => void = (index) => {
+    setActiveIndex(index);
+  };
+
   return (
     <div className="accordion">
       {panels.map(
@@ -27,6 +32,7 @@ const Accordion: ({ children, title, icon }: Props) => JSX.Element = ({
                 aria-expanded={activeIndex === index}
                 className="accordion__trigger"
                 aria-controls={`panel${index}__content`}
+                onClick={() => handleClick(index)}
               >
                 <span className="accordion__title">{title}</span>
                 <span className="accordion__icon">

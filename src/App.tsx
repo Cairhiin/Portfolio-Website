@@ -2,8 +2,9 @@ import CardList from "./components/CardList";
 import Hero from "./components/Hero";
 import Nav from "./components/nav";
 import ProjectsGrid from "./components/ProjectsGrid";
-import "./App.css";
 import Accordion from "./components/Accordion";
+import Cats from "./assets/dungeonAndCats.png";
+import "./App.css";
 
 function App() {
   return (
@@ -23,8 +24,11 @@ function App() {
         <section id="contact">
           <Accordion title="Projects">
             <div>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
-              non!
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Ducimus, non!
+              </p>
+              <img src={Cats} alt="Cats" />
             </div>
             <div>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
