@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Nav from "./components/nav";
 import ProjectsGrid from "./components/ProjectsGrid";
 import "./App.css";
+import ContactForm from "./components/ContactForm";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         </section>
         <section id="contact">
           <h2>Contact Me</h2>
+          <ContactForm />
         </section>
       </main>
       <footer></footer>

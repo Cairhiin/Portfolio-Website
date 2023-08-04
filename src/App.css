@@ -1,5 +1,6 @@
 #projects {
   position: relative;
+  isolation: isolate;
 }
 
 #projects::before {
