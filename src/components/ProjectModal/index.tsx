@@ -44,7 +44,7 @@ export default function CardModal({
         <div className="card-modal-links">
           {links.map(
             ({ url, icon }: Link): JSX.Element => (
-              <a href={url}>
+              <a href={url} key={url}>
                 <FontAwesomeIcon icon={icon} />
               </a>
             )

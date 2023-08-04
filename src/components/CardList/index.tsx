@@ -19,6 +19,7 @@ export default function CardList(): JSX.Element {
       {Object.keys(cardListData).map(
         (name: string): JSX.Element => (
           <Card
+            key={name}
             title={name.charAt(0).toUpperCase() + name.slice(1)}
             icon={(cardListData as any)[name].icon}
           >

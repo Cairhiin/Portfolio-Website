@@ -81,6 +81,7 @@ export default function ProjectsGrid(): JSX.Element {
                 if (index >= 4) return null;
                 return (
                   <Project
+                    key={project.id}
                     image={project.img}
                     content={project.content}
                     title={project.name}
@@ -114,6 +115,7 @@ export default function ProjectsGrid(): JSX.Element {
                 if (index < 4) return null;
                 return (
                   <Project
+                    key={project.id}
                     image={project.img}
                     content={project.content}
                     title={project.name}
@@ -127,6 +129,7 @@ export default function ProjectsGrid(): JSX.Element {
                 if (index < 4) return null;
                 return (
                   <Project
+                    key={project.id}
                     image={project.img}
                     content={project.content}
                     title={project.name}
