@@ -2,12 +2,6 @@ import CardList from "./components/CardList";
 import Hero from "./components/Hero";
 import Nav from "./components/nav";
 import ProjectsGrid from "./components/ProjectsGrid";
-import Accordion from "./components/Accordion";
-import Cats from "./assets/dungeonAndCats.png";
-import Border from "./assets/animatedBorderComponent.png";
-import Book from "./assets/bookrater.png";
-import Gloom from "./assets/gloomhaven.png";
-import Char from "./assets/dndCharCreator.png";
 
 import "./App.css";
 
@@ -24,118 +18,11 @@ function App() {
           </div>
         </section>
         <section id="projects">
+          <h2>Projects</h2>
           <ProjectsGrid />
         </section>
         <section id="contact">
-          <Accordion title="Projects">
-            <div>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Ducimus, non!
-              </p>
-              <img src={Cats} alt="Cats" />
-            </div>
-            <div>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Ducimus, non!
-              </p>
-              <img src={Border} alt="Cats" />
-            </div>
-            <div>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Ducimus, non!
-              </p>
-              <img src={Book} alt="Cats" />
-            </div>
-            <div>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Ducimus, non!
-              </p>
-              <img src={Gloom} alt="Cats" />
-            </div>
-            <div>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Ducimus, non!
-              </p>
-              <img src={Char} alt="Cats" />
-            </div>
-          </Accordion>
-        </section>
-        <section id="contact">
-          Aspernatur ad maxime placeat porro ipsam beatae. Provident
-          voluptatibus veniam ad, dignissimos alias fuga ducimus tenetur illum
-          hic sequi doloremque sint eius esse reiciendis ullam? Amet accusamus
-          illo sequi totam molestiae debitis facere aliquid excepturi odit
-          dicta! Voluptatem voluptates quos, non voluptatibus tenetur animi unde
-          vero maiores nam consectetur numquam dolorem, repellat, debitis culpa
-          optio. Alias dignissimos quaerat architecto aliquam amet deserunt
-          suscipit. Voluptatem dicta voluptatum quas ea at voluptate,
-          voluptatibus provident vero ipsa saepe! Quas beatae placeat nobis ab
-          iste similique inventore impedit dicta.
-        </section>
-        <section id="contact">
-          Aspernatur ad maxime placeat porro ipsam beatae. Provident
-          voluptatibus veniam ad, dignissimos alias fuga ducimus tenetur illum
-          hic sequi doloremque sint eius esse reiciendis ullam? Amet accusamus
-          illo sequi totam molestiae debitis facere aliquid excepturi odit
-          dicta! Voluptatem voluptates quos, non voluptatibus tenetur animi unde
-          vero maiores nam consectetur numquam dolorem, repellat, debitis culpa
-          optio. Alias dignissimos quaerat architecto aliquam amet deserunt
-          suscipit. Voluptatem dicta voluptatum quas ea at voluptate,
-          voluptatibus provident vero ipsa saepe! Quas beatae placeat nobis ab
-          iste similique inventore impedit dicta.
-        </section>
-        <section id="contact">
-          Aspernatur ad maxime placeat porro ipsam beatae. Provident
-          voluptatibus veniam ad, dignissimos alias fuga ducimus tenetur illum
-          hic sequi doloremque sint eius esse reiciendis ullam? Amet accusamus
-          illo sequi totam molestiae debitis facere aliquid excepturi odit
-          dicta! Voluptatem voluptates quos, non voluptatibus tenetur animi unde
-          vero maiores nam consectetur numquam dolorem, repellat, debitis culpa
-          optio. Alias dignissimos quaerat architecto aliquam amet deserunt
-          suscipit. Voluptatem dicta voluptatum quas ea at voluptate,
-          voluptatibus provident vero ipsa saepe! Quas beatae placeat nobis ab
-          iste similique inventore impedit dicta.
-        </section>
-        <section id="contact">
-          Aspernatur ad maxime placeat porro ipsam beatae. Provident
-          voluptatibus veniam ad, dignissimos alias fuga ducimus tenetur illum
-          hic sequi doloremque sint eius esse reiciendis ullam? Amet accusamus
-          illo sequi totam molestiae debitis facere aliquid excepturi odit
-          dicta! Voluptatem voluptates quos, non voluptatibus tenetur animi unde
-          vero maiores nam consectetur numquam dolorem, repellat, debitis culpa
-          optio. Alias dignissimos quaerat architecto aliquam amet deserunt
-          suscipit. Voluptatem dicta voluptatum quas ea at voluptate,
-          voluptatibus provident vero ipsa saepe! Quas beatae placeat nobis ab
-          iste similique inventore impedit dicta.
-        </section>
-        <section id="contact">
-          Aspernatur ad maxime placeat porro ipsam beatae. Provident
-          voluptatibus veniam ad, dignissimos alias fuga ducimus tenetur illum
-          hic sequi doloremque sint eius esse reiciendis ullam? Amet accusamus
-          illo sequi totam molestiae debitis facere aliquid excepturi odit
-          dicta! Voluptatem voluptates quos, non voluptatibus tenetur animi unde
-          vero maiores nam consectetur numquam dolorem, repellat, debitis culpa
-          optio. Alias dignissimos quaerat architecto aliquam amet deserunt
-          suscipit. Voluptatem dicta voluptatum quas ea at voluptate,
-          voluptatibus provident vero ipsa saepe! Quas beatae placeat nobis ab
-          iste similique inventore impedit dicta.
-        </section>
-        <section id="contact">
-          Aspernatur ad maxime placeat porro ipsam beatae. Provident
-          voluptatibus veniam ad, dignissimos alias fuga ducimus tenetur illum
-          hic sequi doloremque sint eius esse reiciendis ullam? Amet accusamus
-          illo sequi totam molestiae debitis facere aliquid excepturi odit
-          dicta! Voluptatem voluptates quos, non voluptatibus tenetur animi unde
-          vero maiores nam consectetur numquam dolorem, repellat, debitis culpa
-          optio. Alias dignissimos quaerat architecto aliquam amet deserunt
-          suscipit. Voluptatem dicta voluptatum quas ea at voluptate,
-          voluptatibus provident vero ipsa saepe! Quas beatae placeat nobis ab
-          iste similique inventore impedit dicta.
+          <h2>Contact Me</h2>
         </section>
       </main>
       <footer></footer>
