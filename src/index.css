@@ -154,7 +154,9 @@ svg {
   --color-600: hsl(213 14% 12% / 1);
   --color-700: hsl(213 10% 10% / 1);
   --color-800: hsl(213 5% 5% / 1);
+
   --color-highlight-400: hsl(210 83% 50% / 1);
+  --color-warning-400: hsl(36, 88%, 39%);
 
   --line-height-400: 1.6;
   --spacing-200: clamp(0.69rem, calc(0.69rem + 0.02vw), 0.72rem);
