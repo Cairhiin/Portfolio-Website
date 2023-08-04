@@ -219,7 +219,6 @@ h3 {
 section {
   padding-block: var(--spacing-900);
   padding-inline: var(--spacing-700);
-  position: relative;
 }
 
 p {

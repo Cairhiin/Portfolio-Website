@@ -1,3 +1,7 @@
+#projects {
+  position: relative;
+}
+
 #projects::before {
   content: "";
   position: absolute;
@@ -6,6 +10,7 @@
   bottom: 0;
   width: 100%;
   opacity: 0.05;
+  z-index: -1;
   background-image: url("/src/assets/skills-bg.jpg");
   background-position: center;
   background-attachment: fixed;
