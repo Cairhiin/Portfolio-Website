@@ -219,4 +219,11 @@ p {
 
 section {
   background-color: inherit;
+  position: relative;
+}
+
+section h2 {
+  text-align: center;
+  font-size: var(--fs-900);
+  margin-bottom: 1.5em;
 }

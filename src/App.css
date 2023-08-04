@@ -3,12 +3,6 @@
   padding-block-end: var(--spacing-900);
 }
 
-#skills h2 {
-  text-align: center;
-  font-size: var(--fs-900);
-  margin-bottom: 1.5em;
-}
-
 #projects {
   position: relative;
 }

@@ -37,8 +37,8 @@ export default function CardModal({
     >
       <img src={image} alt={title} />
       <div className="card-modal-main">
-        <h3 id="dialog-label">{title}</h3>
         <div className="card-modal-content" id="dialog-desc">
+          <h3 id="dialog-label">{title}</h3>
           {children}
         </div>
         <div className="card-modal-links">

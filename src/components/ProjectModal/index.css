@@ -3,6 +3,7 @@
   top: 100px;
   left: var(--_xPos);
   width: var(--_width);
+  min-width: 300px;
   height: 0;
   overflow: hidden;
   flex-direction: column;
@@ -14,21 +15,27 @@
 
 .card-modal.active {
   z-index: 10;
-  height: fit-content;
+  min-height: 45vh;
   transform-origin: center center;
   transform: scale(1.1) translateY(-20px);
   transition: transform 300ms ease-out;
 }
 
+.card-modal.active img {
+  max-height: 200px;
+}
+
 .card-modal h3 {
   font-size: var(--fs-500);
   color: var(--color-highlight-400);
+  line-height: 1.2;
+  padding-block-end: 0.5rem;
 }
 
 .card-modal > .card-modal-main {
+  height: 100%;
   font-size: var(--fs-300);
   display: flex;
-  height: max-content;
   flex-direction: column;
   justify-content: space-between;
   padding: 0.5rem 1rem;
@@ -38,6 +45,9 @@
   padding-top: 0.3em;
   text-align: right;
   font-size: var(--fs-500);
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
 }
 
 .card-modal a,
